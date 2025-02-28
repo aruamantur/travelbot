@@ -1,0 +1,1415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!-- Greeting -->
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hi! Welcome to your Malaysia travel assistant. What kind of activities do you enjoy? (Nature, Culture, Food, Adventure, Shopping, Relaxation)
+    </template>
+  </category>
+  <!-- Nature Recommendation -->
+  <category>
+    <pattern>I LOVE NATURE</pattern>
+    <template>
+      Great choice! You should visit Taman Negara, Langkawi, and the Cameron Highlands. Would you like recommendations for accommodations?
+    </template>
+  </category>
+  <!-- Culture Recommendation -->
+  <category>
+    <pattern>I LOVE CULTURE</pattern>
+    <template>
+      Wonderful! You should explore Malacca, George Town (Penang), and the Batu Caves. Would you like a historical tour suggestion?
+    </template>
+  </category>
+  <!-- Food Recommendation -->
+  <category>
+    <pattern>I LOVE FOOD</pattern>
+    <template>
+      Malaysia is a food paradise! Try Nasi Lemak, Char Kway Teow, and Laksa in Kuala Lumpur and Penang. Want a food tour recommendation?
+    </template>
+  </category>
+  <!-- Adventure Recommendation -->
+  <category>
+    <pattern>I LOVE ADVENTURE</pattern>
+    <template>
+      Thrilling! Go scuba diving in Sipadan, hike Mount Kinabalu, or explore Gua Tempurung caves. Need an itinerary for adventure activities?
+    </template>
+  </category>
+
+  <!-- Shopping Recommendation -->
+  <category>
+    <pattern>I LOVE SHOPPING</pattern>
+    <template>
+      Awesome! Visit Pavilion KL, Suria KLCC, and Jonker Street Night Market for a mix of luxury and street shopping. Need discount deals?
+    </template>
+  </category>
+  <!-- Relaxation Recommendation -->
+  <category>
+    <pattern>I LOVE RELAXATION</pattern>
+    <template>
+      Perfect! Enjoy spa retreats in Langkawi, beach resorts in Tioman, or hot springs in Poring. Need wellness package options?
+    </template>
+  </category>
+  <!-- Follow-up on Accommodation -->
+  <category>
+    <pattern>YES I NEED ACCOMMODATION</pattern>
+    <template>
+      You can find budget hostels in Kuala Lumpur, beach resorts in Langkawi, or eco-lodges in Taman Negara. Do you have a budget range?
+    </template>
+  </category>
+  <!-- Follow-up on Budget -->
+  <category>
+    <pattern>MY BUDGET IS LOW</pattern>
+    <template>
+      No worries! Consider guesthouses, hostels, or Airbnb options in Kuala Lumpur and Penang. Would you like links to budget stays?
+    </template>
+  </category>
+  <category>
+    <pattern>MY BUDGET IS MEDIUM</pattern>
+    <template>
+      Great! You can stay in boutique hotels, mid-range resorts, or serviced apartments. Need suggestions for specific cities?
+    </template>
+  </category>
+  <category>
+    <pattern>MY BUDGET IS HIGH</pattern>
+    <template>
+      Luxury stays await! Check out the Ritz-Carlton Kuala Lumpur, Datai Langkawi, or Pangkor Laut Resort. Need bookings assistance?
+    </template>
+  </category>
+  
+  <category>
+    <pattern>THANK YOU</pattern>
+    <template>
+      You're welcome! Enjoy your trip to Malaysia and feel free to ask if you need more travel tips. Safe travels!
+    </template>
+   </category>
+</aiml>
+
+
+<aiml>
+     <category>
+        <pattern>hi</pattern>
+        <template>
+        <random>
+            <li>Hi, I'm Rachael. What should I call you?</li>
+            <li>Hey there, I'm Rachael. What's your name?</li>
+            <li>Welcome! My name is Rachael. How should I address you?</li>
+            <li>Hi, I' Rachael. Tell me your name, and I’ll find the perfect destination just for you!</li>
+        </random>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>hello</pattern>
+        <template>
+        <random>
+            <li>Hi, I'm Rachael. What should I call you?</li>
+            <li>Hey there, I'm Rachael. What's your name?</li>
+            <li>Welcome! My name is Rachael. How should I address you?</li>
+            <li>Hi, I' Rachael. Tell me your name, and I’ll find the perfect destination just for you!</li>
+        </random>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>My name is *</pattern>
+        <template>
+        <random>
+            <li>Nice to meet you <set name="nameUser"> <star/>. How can I help you? </set></li>
+            <li>How can I assist you with your travel plans today, <set name="nameUser"> <star/>?</set></li>
+            <li>Good day, <set name="nameUser"> <star/></set>! Let me know where you’d like to go, and I’ll handle the rest.</li>
+            <li>Thank you, <set name="nameUser"> <star/></set>! How can I assist you with your travel plans?</li>
+            <li>Awesome, <set name="nameUser"> <star/></set>! Where are we off to today?</li>
+            <li>Lovely to meet you, <set name="nameUser"> <star/></set>. Let’s find your perfect trip!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> HOTEL </pattern>
+        <template>Looking for hotels in Kuala Lumpur? Let me know your requirements.
+            <button>
+                <text>Best Rated</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Nearest to Airport</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Affordable</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Near Public Transport</text>
+                <postback></postback>
+            <button>
+                <text>KLCC View</text>
+                <postback></postback>
+            </button>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ HOTEL </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> HOTEL * </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ HOTEL * </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Best Rated</pattern>
+        <template>Here are some of the best-rated hotels in Kuala Lumpur that I recommend for your stay!
+        <ul>
+        <li>Banyan Tree Kuala Lumpur (4.8 stars)</li>
+        <li>Villa Samadhi Kuala Lumpur (4.7 stars)</li>
+        <li>Four Seasons Hotel Kuala Lumpur (4.6 stars)</li>
+        <li>Else Kuala Lumpur (4.6 stars)</li>
+        <li>The St. Regis Kuala Lumpur (4.6 stars)</li>
+        <li>The RuMa Hotel and Residences (4.6 stars)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Nearest to Airport</pattern>
+        <template> Looking for a hotel close to the airport? Check out these options near KLIA and KLIA 2!
+        <ul>
+            <li>Sama-Sama Express Hotel KLIA Terminal 1 (Airside Transit Hotel) (1.3km away)</li>
+            <li>Sama-Sama Hotel, KILA, Kuala Lumpur (1.8km away)</li>
+            <li>Aerotel Kuala Lumpur (1.8 km away)</li>
+            <li>CapsuleTransit MAX (Airport Hotel and Lounge) (1.9km away)</li>
+            <li>Tune Hotel KILA-KILA2, Airport Transit Hotel (2.2 km away)</li>
+            <li>ibis Styles Sepang KLIA (2.8 km away)</li>
+        </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Affordable</pattern>
+        <template> These budget hotels in Kuala Lumpur provide great comfort at an affordable price.
+        <ul>
+        <li>ARK STAYCATION HOME (MYR30)</li>
+        <li>OYO Home 90468 Syariah Ayam Pedas (MYR32)</li>
+        <li>Senja Hostel Kuala Lumpur, Chinatown (MYR38)</li>
+        <li>SUNRISE INN HOTEL (MYR39)</li>
+        <li>Swing and Pillows @ Jalan Radin Bagus, Sri Petaling (MYR39)</li>
+        <li>Oasis Guest House (MYR42)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Near Public Transport</pattern>
+        <template> Here are some hotels in Kuala Lumpur located near public transport for easy travel around the city.
+            <ul>
+                <li>Ohana Kuala Lumpur (12-minute walk to Hang Tuah metro stop)</li>
+                <li>Hilton Garden Inn Kuala Lumpur Jalan Tuanku Abdul Rahman South (3-minute walk to bus stop)</li>
+                <li>D'Majestic Premier Suites Kuala Lumpur (1-minute walk to bus stop)</li>
+                <li>Expressionz KLCC by Mana Mana (3-minute walk to bus stop) </li>
+                <li>Sleeping Lion Suites (6-minute walk to Bukit Bintang MRT) </li>
+                <li>THE FACE Suites (7-minute walk to LRT Dang Wangi) </li>
+            </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>KLCC View</pattern>
+        <template> Check out these hotels with KLCC view in Kuala Lumpur for a great stay!
+        <ul>
+        <li>Regalia Residence (2.1 km from centre)</li>
+        <li>The Riv, Riveria City KL Sentral (3.3 km from centre)</li>
+        <li>Anggun Residence KLCC (1.3 km from centre)</li>
+        <li>Chamber suites KL (2 km from centre)</li>
+        <li>Sky Suites KLCC by Ali (0.3 km from centre)</li>
+        <li>Axon Bukit Bintang (1.2 km from centre)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>flights from china to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from China to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>China Southern Airlines</text>
+                <url>https://oversea.csair.com/tk/my/en/book/search</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+
+    <category>
+        <pattern>flights from indonesia to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from Indonesia to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>Garuda Indonesia</text>
+                <url>https://www.garuda-indonesia.com/my/en//</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>flights from kazakhstan to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from Kazakhstan to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>Air Astana</text>
+                <url>https://www.airastana.com/global-en</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+
+    <category>
+        <pattern>baggage policies for malaysia airlines</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage MH</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage MH</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text>Extra baggage MH</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 7 kg</li>
+             <li>Business Class: 2 pieces, 14 kg</li>
+             <li>Business Suite: 2 pieces, 14 kg</li>
+             <li>All classes: 1 additional small personal item (briefcase, handbag, computer bag, small camera bag)</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Each piece of baggage you check in must have linear dimensions (length + height + width) of less than 158cm or 62in. </li>
+             <li>Maximum single item weight for checked baggage with MH is 32 kg.</li>
+             <li>Economy Class: 20–35 kg (varies by fare type)</li>
+             <li>Business Class: 40-50 kg (varies by fare type)</li>
+             <li>Business Suite: 55 kg</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Extra baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Charges will be calculated based on distance flown from point of departure to the final destination in a single itinerary.</li>
+             <li>Rates will be charged on per kg basis</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>baggage policies for airasia</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage AK</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage AK</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage AK</pattern>
+        <template>
+         <ul>
+             <li>Standard Allowance: 1 main cabin bag (7 kg) + 1 small personal item (laptop bag, handbag, small backpack)</li>
+             <li>Extra Cabin Baggage (14 kg)</li>
+         </ul>
+         
+         For more information, please visit AirAsia official website. 
+         <link>
+             <text>AirAsia baggage policy</text>
+             <url>https://www.airasia.com/aa/inflight-comforts/en/gb/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage AK</pattern>
+        <template>
+         <ul>
+             <li>Weight limit for one bag is 32kg.</li>
+             <li>Each passenger is entitled to purchase one checked baggage per booking, per flight.</li>
+             <li>Limited units for 50kg and 60kg checked baggage.</li>
+         </ul>
+         
+        For more information, please visit AirAsia official website. 
+         <link>
+             <text>AirAsia baggage policy</text>
+             <url>https://www.airasia.com/aa/inflight-comforts/en/gb/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>baggage policies for china southern airlines</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage CZ</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage CZ</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text> Free baggage allowance CZ</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Excess checked baggage CZ</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage CZ</pattern>
+        <template>
+         <ul>
+             <li>Economy Class/Premium Economy Class: 1 piece, 8 kg</li>
+             <li>First Class/Business Class: 2 pieces, 8 kg per piece</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage CZ</pattern>
+        <template>
+         <ul>
+             <li>Passenger(s) name, detailed address and telephone number should be written on the baggage.</li>
+             <li>United States destinations involved: 45kg/pc</li>
+             <li>no United States destinations involved: 32kg/pc </li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Free baggage allowance CZ</pattern>
+        <template> International travel
+         <ul>
+             <li>First class: 3 pcs, 32 kg</li>
+             <li>Business class: 2 pcs, 32 kg</li>
+             <li>Premium Economy Class:1 pcs, 32 kg or 2 pcs, 23 kg. (Depends on itinerary)</li>
+             <li>Economy Class: 1 pcs, 32 kg or 2 pcs, 23 kg. (Depends on itinerary)</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Excess checked baggage CZ</pattern>
+        <template> International travel
+         <ul>
+             <li>The first piece in addition to the standard allowance: 1380 CNY/pc, 23 kg</li>
+             <li>The second piece or more in addition to the standard allowance: 2000 CNY/pc, 23 kg</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>baggage policies for garuda indonesia</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage GA</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage GA</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Cabin baggage GA</pattern>
+        <template>
+         <ul>
+             <li>1 baggage per passenger, 7 kg</li>
+             <li>Free Carry On Item: laptop bag, umbrella, cabin size baby stroller, infant carrying basket, fully collapsible wheelchair, etc.</li>         </ul>
+         
+         For more information, please visit Garuda Indonesia official website. 
+         <link>
+             <text>Garuda Indonesia baggage policy</text>
+             <url>https://www.garuda-indonesia.com/my/en//</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>Checked baggage GA</pattern>
+        <template>
+            International Flights
+         <ul>
+             <li>Economy Class: 30kg free checked baggage</li>
+             <li>Business Class: 40kg free checked baggage</li>
+             <li>First Class: 50kg free checked baggage</li>
+         </ul>
+         
+         For more information, please visit Garuda Indonesia official website. 
+         <link>
+             <text>Garuda Indonesia baggage policy</text>
+             <url>https://www.garuda-indonesia.com/my/en//</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>baggage policies for air astana</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage KC</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage KC</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text>Additional baggage KC</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+
+        <category>
+        <pattern>Cabin baggage KC</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 8 kg</li>
+             <li>Economy Sleeper: 1 piece, 8 kg</li>
+             <li>Business Class: 2 pieces, 16 kg</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>Checked baggage KC</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 23 kg</li>
+             <li>Economy Sleeper: 2 pieces, 46 kg</li>
+             <li>Business Class: 2 pieces, 64 kg</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Additional baggage KC</pattern>
+        <template> 
+         <ul>
+             <li>Pre-paid additional baggage can be added 36 hours before departure. </li>
+             <li>Requests received less than 36 hours before departure will be subject to charges at the standard airport rate.</li>
+             <li>Checked baggage items exceeding 32kg are not permitted by the airline</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>THANK YOU</pattern>
+        <template>
+        <random>
+            <li>You're welcome. Have a fantastic trip! </li>
+            <li>No problem! Enjoy your travels.</li>
+            <li>Happy to help! Let me know if you need anything else.</li>
+            <li>It was my pleasure! Safe travels and have a wonderful time!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ THANK YOU </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> THANK YOU * </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ THANK YOU * </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+
+<category>
+        <pattern>THANKS</pattern>
+        <template>
+        <random>
+            <li>You're welcome. Have a fantastic trip! </li>
+            <li>No problem! Enjoy your travels.</li>
+            <li>Happy to help! Let me know if you need anything else.</li>
+            <li>It was my pleasure! Safe travels and have a wonderful time!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ THANKS </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> THANKS * </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ THANKS * </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+</aiml>  
+
+<aiml>
+     <category>
+        <pattern>hi</pattern>
+        <template>
+        <random>
+            <li>Hi, I'm Rachael. What should I call you?</li>
+            <li>Hey there, I'm Rachael. What's your name?</li>
+            <li>Welcome! My name is Rachael. How should I address you?</li>
+            <li>Hi, I' Rachael. Tell me your name, and I’ll find the perfect destination just for you!</li>
+        </random>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>hello</pattern>
+        <template>
+        <random>
+            <li>Hi, I'm Rachael. What should I call you?</li>
+            <li>Hey there, I'm Rachael. What's your name?</li>
+            <li>Welcome! My name is Rachael. How should I address you?</li>
+            <li>Hi, I' Rachael. Tell me your name, and I’ll find the perfect destination just for you!</li>
+        </random>
+        </template>
+    </category>
+    
+        <category>
+        <pattern>My name is *</pattern>
+        <template>
+        <random>
+            <li>Nice to meet you <set name="nameUser"> <star/>. How can I help you? </set></li>
+            <li>How can I assist you with your travel plans today, <set name="nameUser"> <star/>?</set></li>
+            <li>Good day, <set name="nameUser"> <star/></set>! Let me know where you’d like to go, and I’ll handle the rest.</li>
+            <li>Thank you, <set name="nameUser"> <star/></set>! How can I assist you with your travel plans?</li>
+            <li>Awesome, <set name="nameUser"> <star/></set>! Where are we off to today?</li>
+            <li>Lovely to meet you, <set name="nameUser"> <star/></set>. Let’s find your perfect trip!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> HOTEL </pattern>
+        <template>Looking for hotels in Kuala Lumpur? Let me know your requirements.
+            <button>
+                <text>Best Rated</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Nearest to Airport</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Affordable</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Near Public Transport</text>
+                <postback></postback>
+            <button>
+                <text>KLCC View</text>
+                <postback></postback>
+            </button>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ HOTEL </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> HOTEL * </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ HOTEL * </pattern>
+        <template>
+            <srai>HOTEL</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Best Rated</pattern>
+        <template>Here are some of the best-rated hotels in Kuala Lumpur that I recommend for your stay!
+        <ul>
+        <li>Banyan Tree Kuala Lumpur (4.8 stars)</li>
+        <li>Villa Samadhi Kuala Lumpur (4.7 stars)</li>
+        <li>Four Seasons Hotel Kuala Lumpur (4.6 stars)</li>
+        <li>Else Kuala Lumpur (4.6 stars)</li>
+        <li>The St. Regis Kuala Lumpur (4.6 stars)</li>
+        <li>The RuMa Hotel and Residences (4.6 stars)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Nearest to Airport</pattern>
+        <template> Looking for a hotel close to the airport? Check out these options near KLIA and KLIA 2!
+        <ul>
+            <li>Sama-Sama Express Hotel KLIA Terminal 1 (Airside Transit Hotel) (1.3km away)</li>
+            <li>Sama-Sama Hotel, KILA, Kuala Lumpur (1.8km away)</li>
+            <li>Aerotel Kuala Lumpur (1.8 km away)</li>
+            <li>CapsuleTransit MAX (Airport Hotel and Lounge) (1.9km away)</li>
+            <li>Tune Hotel KILA-KILA2, Airport Transit Hotel (2.2 km away)</li>
+            <li>ibis Styles Sepang KLIA (2.8 km away)</li>
+        </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Affordable</pattern>
+        <template> These budget hotels in Kuala Lumpur provide great comfort at an affordable price.
+        <ul>
+        <li>ARK STAYCATION HOME (MYR30)</li>
+        <li>OYO Home 90468 Syariah Ayam Pedas (MYR32)</li>
+        <li>Senja Hostel Kuala Lumpur, Chinatown (MYR38)</li>
+        <li>SUNRISE INN HOTEL (MYR39)</li>
+        <li>Swing and Pillows @ Jalan Radin Bagus, Sri Petaling (MYR39)</li>
+        <li>Oasis Guest House (MYR42)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Near Public Transport</pattern>
+        <template> Here are some hotels in Kuala Lumpur located near public transport for easy travel around the city.
+            <ul>
+                <li>Ohana Kuala Lumpur (12-minute walk to Hang Tuah metro stop)</li>
+                <li>Hilton Garden Inn Kuala Lumpur Jalan Tuanku Abdul Rahman South (3-minute walk to bus stop)</li>
+                <li>D'Majestic Premier Suites Kuala Lumpur (1-minute walk to bus stop)</li>
+                <li>Expressionz KLCC by Mana Mana (3-minute walk to bus stop) </li>
+                <li>Sleeping Lion Suites (6-minute walk to Bukit Bintang MRT) </li>
+                <li>THE FACE Suites (7-minute walk to LRT Dang Wangi) </li>
+            </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>KLCC View</pattern>
+        <template> Check out these hotels with KLCC view in Kuala Lumpur for a great stay!
+        <ul>
+        <li>Regalia Residence (2.1 km from centre)</li>
+        <li>The Riv, Riveria City KL Sentral (3.3 km from centre)</li>
+        <li>Anggun Residence KLCC (1.3 km from centre)</li>
+        <li>Chamber suites KL (2 km from centre)</li>
+        <li>Sky Suites KLCC by Ali (0.3 km from centre)</li>
+        <li>Axon Bukit Bintang (1.2 km from centre)</li>
+        </ul>    
+        </template>
+    </category>
+    
+    <category>
+        <pattern>flights from china to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from China to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>China Southern Airlines</text>
+                <url>https://oversea.csair.com/tk/my/en/book/search</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+
+    <category>
+        <pattern>flights from indonesia to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from Indonesia to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>Garuda Indonesia</text>
+                <url>https://www.garuda-indonesia.com/my/en//</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>flights from kazakhstan to kl</pattern>
+        <template>
+        Here are the websites of major airlines for flights from Kazakhstan to Kuala Lumpur 
+        <ul>
+            <li>
+                <link>
+                <text>Air Astana</text>
+                <url>https://www.airastana.com/global-en</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>Malaysia Airlines</text>
+                <url>https://www.malaysiaairlines.com/my/en/home.html</url>
+                </link>
+            </li>
+            <li>
+                <link>
+                <text>AirAsia</text>
+                <url>https://www.airasia.com/en/gb</url>
+                </link>
+            </li>
+        </ul>
+        </template>
+    </category>
+
+    <category>
+        <pattern>baggage policies for malaysia airlines</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage MH</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage MH</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text>Extra baggage MH</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 7 kg</li>
+             <li>Business Class: 2 pieces, 14 kg</li>
+             <li>Business Suite: 2 pieces, 14 kg</li>
+             <li>All classes: 1 additional small personal item (briefcase, handbag, computer bag, small camera bag)</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Each piece of baggage you check in must have linear dimensions (length + height + width) of less than 158cm or 62in. </li>
+             <li>Maximum single item weight for checked baggage with MH is 32 kg.</li>
+             <li>Economy Class: 20–35 kg (varies by fare type)</li>
+             <li>Business Class: 40-50 kg (varies by fare type)</li>
+             <li>Business Suite: 55 kg</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Extra baggage MH</pattern>
+        <template>
+         <ul>
+             <li>Charges will be calculated based on distance flown from point of departure to the final destination in a single itinerary.</li>
+             <li>Rates will be charged on per kg basis</li>
+         </ul>
+         
+         For more information, please visit Malaysia Airline official website. 
+         <link>
+             <text>Malaysia Airlines baggage policy</text>
+             <url>https://www.malaysiaairlines.com/my/en/travel-info/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>baggage policies for airasia</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage AK</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage AK</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage AK</pattern>
+        <template>
+         <ul>
+             <li>Standard Allowance: 1 main cabin bag (7 kg) + 1 small personal item (laptop bag, handbag, small backpack)</li>
+             <li>Extra Cabin Baggage (14 kg)</li>
+         </ul>
+         
+         For more information, please visit AirAsia official website. 
+         <link>
+             <text>AirAsia baggage policy</text>
+             <url>https://www.airasia.com/aa/inflight-comforts/en/gb/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage AK</pattern>
+        <template>
+         <ul>
+             <li>Weight limit for one bag is 32kg.</li>
+             <li>Each passenger is entitled to purchase one checked baggage per booking, per flight.</li>
+             <li>Limited units for 50kg and 60kg checked baggage.</li>
+         </ul>
+         
+        For more information, please visit AirAsia official website. 
+         <link>
+             <text>AirAsia baggage policy</text>
+             <url>https://www.airasia.com/aa/inflight-comforts/en/gb/baggage.html</url>
+         </link>
+        </template>
+    </category>
+    
+     <category>
+        <pattern>baggage policies for china southern airlines</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage CZ</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage CZ</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text> Free baggage allowance CZ</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Excess checked baggage CZ</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Cabin baggage CZ</pattern>
+        <template>
+         <ul>
+             <li>Economy Class/Premium Economy Class: 1 piece, 8 kg</li>
+             <li>First Class/Business Class: 2 pieces, 8 kg per piece</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>Checked baggage CZ</pattern>
+        <template>
+         <ul>
+             <li>Passenger(s) name, detailed address and telephone number should be written on the baggage.</li>
+             <li>United States destinations involved: 45kg/pc</li>
+             <li>no United States destinations involved: 32kg/pc </li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Free baggage allowance CZ</pattern>
+        <template> International travel
+         <ul>
+             <li>First class: 3 pcs, 32 kg</li>
+             <li>Business class: 2 pcs, 32 kg</li>
+             <li>Premium Economy Class:1 pcs, 32 kg or 2 pcs, 23 kg. (Depends on itinerary)</li>
+             <li>Economy Class: 1 pcs, 32 kg or 2 pcs, 23 kg. (Depends on itinerary)</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> Excess checked baggage CZ</pattern>
+        <template> International travel
+         <ul>
+             <li>The first piece in addition to the standard allowance: 1380 CNY/pc, 23 kg</li>
+             <li>The second piece or more in addition to the standard allowance: 2000 CNY/pc, 23 kg</li>
+         </ul>
+         
+         For more information, please visit China Southern Airline official website. 
+         <link>
+             <text>China Southern Airlines baggage policy</text>
+             <url>https://www.csair.com/en/orders/order/kpxlgd/</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>baggage policies for garuda indonesia</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage GA</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage GA</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Cabin baggage GA</pattern>
+        <template>
+         <ul>
+             <li>1 baggage per passenger, 7 kg</li>
+             <li>Free Carry On Item: laptop bag, umbrella, cabin size baby stroller, infant carrying basket, fully collapsible wheelchair, etc.</li>         </ul>
+         
+         For more information, please visit Garuda Indonesia official website. 
+         <link>
+             <text>Garuda Indonesia baggage policy</text>
+             <url>https://www.garuda-indonesia.com/my/en//</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>Checked baggage GA</pattern>
+        <template>
+            International Flights
+         <ul>
+             <li>Economy Class: 30kg free checked baggage</li>
+             <li>Business Class: 40kg free checked baggage</li>
+             <li>First Class: 50kg free checked baggage</li>
+         </ul>
+         
+         For more information, please visit Garuda Indonesia official website. 
+         <link>
+             <text>Garuda Indonesia baggage policy</text>
+             <url>https://www.garuda-indonesia.com/my/en//</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>baggage policies for air astana</pattern>
+        <template>
+            <button>
+                <text>Cabin baggage KC</text>
+                <postback></postback>
+            </button>
+            <button>
+                <text>Checked baggage KC</text>
+                <postback></postback>
+            </button>
+             <button>
+                <text>Additional baggage KC</text>
+                <postback></postback>
+            </button>
+        </template>
+    </category>
+
+        <category>
+        <pattern>Cabin baggage KC</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 8 kg</li>
+             <li>Economy Sleeper: 1 piece, 8 kg</li>
+             <li>Business Class: 2 pieces, 16 kg</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+
+     <category>
+        <pattern>Checked baggage KC</pattern>
+        <template>
+         <ul>
+             <li>Economy Class: 1 piece, 23 kg</li>
+             <li>Economy Sleeper: 2 pieces, 46 kg</li>
+             <li>Business Class: 2 pieces, 64 kg</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Additional baggage KC</pattern>
+        <template> 
+         <ul>
+             <li>Pre-paid additional baggage can be added 36 hours before departure. </li>
+             <li>Requests received less than 36 hours before departure will be subject to charges at the standard airport rate.</li>
+             <li>Checked baggage items exceeding 32kg are not permitted by the airline</li>
+         </ul>
+         
+         For more information, please visit Air Astana official website. 
+         <link>
+             <text>Air Astana baggage policy</text>
+             <url>https://airastana.com/kaz-en/information/baggage-allowance</url>
+         </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>THANK YOU</pattern>
+        <template>
+        <random>
+            <li>You're welcome. Have a fantastic trip! </li>
+            <li>No problem! Enjoy your travels.</li>
+            <li>Happy to help! Let me know if you need anything else.</li>
+            <li>It was my pleasure! Safe travels and have a wonderful time!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ THANK YOU </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> THANK YOU * </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ THANK YOU * </pattern>
+        <template>
+            <srai>THANK YOU</srai>
+        </template>
+    </category>
+
+<category>
+        <pattern>THANKS</pattern>
+        <template>
+        <random>
+            <li>You're welcome. Have a fantastic trip! </li>
+            <li>No problem! Enjoy your travels.</li>
+            <li>Happy to help! Let me know if you need anything else.</li>
+            <li>It was my pleasure! Safe travels and have a wonderful time!</li>
+        </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ THANKS* </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> _ THANKS* </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+      <category>
+        <pattern> _ THANKS * </pattern>
+        <template>
+            <srai>THANKS</srai>
+        </template>
+    </category>
+    
+</aiml>  
+
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0">
+    <category>
+        <pattern>VISA &amp; TRAVEL RULES MALAYSIA</pattern>
+        <template>
+            Sure! Please choose a visa type:
+            <br/>- Tourist Visa
+            <br/>- Business Visa
+            <br/>- Student Visa
+            <br/>- Work Visa
+            <br/>- Permanent Residency
+        </template>
+    </category>
+
+    <category>
+        <pattern>TOURIST VISA</pattern>
+        <template>
+            Ok, let me provide you info about the Tourist Visa for Malaysia.
+            <br/>- Valid for short visits (up to 90 days for most countries).
+            <br/>- Some countries are visa-exempt.
+            <br/>- Requires a passport valid for at least 6 months.
+            <br/>- Proof of sufficient funds and return ticket may be required.
+        </template>
+    </category>
+
+    <category>
+        <pattern>BUSINESS VISA</pattern>
+        <template>
+            Ok, let me provide you info about the Business Visa for Malaysia.
+            <br/>- Issued to individuals attending business meetings, conferences, or investments.
+            <br/>- Typically valid for 3 to 6 months.
+            <br/>- Requires an invitation letter from a Malaysian company.
+            <br/>- Proof of accommodation and sufficient funds required.
+        </template>
+    </category>
+
+    <category>
+        <pattern>STUDENT VISA</pattern>
+        <template>
+            Ok, let me provide you info about the Student Visa for Malaysia.
+            <br/>- Issued to international students enrolled in Malaysian institutions.
+            <br/>- Requires a confirmed admission letter from a Malaysian university.
+            <br/>- Valid for the duration of the study program.
+            <br/>- Medical examination and insurance are mandatory.
+        </template>
+    </category>
+
+    <category>
+        <pattern>WORK VISA</pattern>
+        <template>
+            Ok, let me provide you info about the Work Visa for Malaysia.
+            <br/>- Issued to skilled workers with a job offer in Malaysia.
+            <br/>- Typically valid for 1 to 2 years, renewable.
+            <br/>- Requires sponsorship from a Malaysian employer.
+            <br/>- Employer must obtain an approval letter from the Immigration Department.
+        </template>
+    </category>
+
+    <category>
+        <pattern>PERMANENT RESIDENCY</pattern>
+        <template>
+            Ok, let me provide you with info about Permanent Residency in Malaysia.
+            <br/>- Available to high-net-worth individuals, professionals, and spouses of Malaysian citizens.
+            <br/>- Requires a long-term stay and contributions to the country’s economy.
+            <br/>- Various categories exist, such as the Malaysia My Second Home (MM2H) program.
+        </template>
+    </category>
+</aiml>
+
+
+
